@@ -1,8 +1,12 @@
-# ELECTRA_classifier
+# KcELECTRA를 황용한 '저희' 의미 분류기
 
 <!--- These are examples. See https://shields.io for others or to customize this set of shields. You might want to include dependencies, project status and licence info here --->
+## Dataset
+연세 말뭉치와 위키 문헌 근대 문학에서 '저희'가 포함된 문장을 '지칭의 저희'(label 0)와 '겸양의 저희(label 1)'로 분류
 
-This project is a `ELECTRA based semantic classifier` that allows to classify different meaning of Korean word '저희'.
+1. transformer 와 HuggingFace 를 이용하여 Beomi님의 KcELECTRA(https://github.com/Beomi/KcELECTRA)를 통해 '저희'의 의미를 이진분류하는 모델 생성 ('지칭의 저희'(label 0)와 '겸양의 저희(label 1)'로 분류)
+2. 만든 모델로 조선일보, 동아일보 100년 데이터에서 '저희'의 의미 분류
+3. Explainable AI SHAP(https://shap.readthedocs.io/en/latest/index.html) 모델을 활용하여 각 분류에 유의미하게 쓰인 단어 확인
 
 ## Prerequisites
 
@@ -10,23 +14,14 @@ Before you begin, ensure you have met the following requirements:
 <!--- These are just example requirements. Add, duplicate or remove as required --->
 * You have installed the latest version of `Python`.
 * This project can be run in terminal(MAC) or powershell (Windows).
-## Using TripAdvisor Review Crawling
+## 
 
 To use <TripAdvisor Review Crawling>, follow these steps:
 
 ```
 $ python TripAdvisor crawling.py --num 2000
 ```
-number 2000 is an example number that states the starting number of reviews.
 
-This code will collect 
-1. Reviewer ID
-2. Reviewer location
-3. Likes on the review
-4. Rank of the review
-5. Review title
-6. Review text
-7. review date
 
 you can add or remove the above components.
 
