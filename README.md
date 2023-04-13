@@ -12,19 +12,22 @@
 
 Before you begin, ensure you have met the following requirements:
 <!--- These are just example requirements. Add, duplicate or remove as required --->
-* You have installed the latest version of `Python`.
-* This project can be run in terminal(MAC) or powershell (Windows).
-## 
-
-To use <TripAdvisor Review Crawling>, follow these steps:
-
+* You have installed the 3.9X version of `Python`.
+* Install packages with requirements.txt
 ```
-$ python TripAdvisor crawling.py --num 2000
-```
+$ pip install -r requirements.txt
+```## 
 
+## 코드
 
-you can add or remove the above components.
+1. KcELECTRA_모델_fine_tuning_조선동아_기사_분류.ipynb 
+Finetuning dataset(train_small.csv, test_small.csv)을 불러와서 '저희'의미 분류 모델 Finetuning
+Finetuning된 모델로 조선, 동아일보의 '저희'가 포함된 문장 이진분류
+시계열로 의미 활용 추세 그래프 제작
 
+2. KcELECTRA_모델_SHAP.ipynb
+기학습된 모델이 의미를 분류하는데에 중요하게 판단한 단어들을 찾기 위해
+Explanable AI SHAP 모델을 활용
 
 ## Contributing to <project_name>
 <!--- If your README is long or you have some specific process or steps you want contributors to follow, consider creating a separate CONTRIBUTING.md file--->
